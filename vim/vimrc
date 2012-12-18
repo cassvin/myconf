@@ -1,0 +1,129 @@
+" General settings
+set showmode
+syntax on
+set nu
+set encoding=utf-8
+" set fileencodings=utf-8,chinese,latin-1
+" if has("win32")
+" 	set fileencoding=chinese
+" else
+" 	set fileencoding=utf-8
+" endif
+set backspace=2
+set backspace=indent,eol,start
+set fileencoding=utf-8	
+set tabstop=2 
+set shiftwidth=2
+set expandtab
+" highlight the match words
+" set hlsearch
+set incsearch
+set ruler
+set autoindent
+set smartindent
+" setlocal spell spelllang=en
+" set ai!
+" set showmatch
+
+" 关闭智能补全时的窗口
+set completeopt=longest,menu	
+
+" Open the taglist  
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+
+" 智能补全
+" filetype plugin indent on
+" filetype on
+filetype off
+filetype plugin indent on
+
+" Set the tag file
+" set tags=/path/to/your/file/name
+
+" Ignore case when searching
+set ignorecase
+
+" set session option
+set sessionoptions-=curdir
+set sessionoptions+=sesdir
+
+" set the indent-guide
+let g:indent_guides_guide_size=1
+
+" set map leader
+let mapleader="\\"
+" set timeoutlen
+set timeoutlen=1500
+" show cmd
+set showcmd
+
+" Tab configuration
+map <leader>tt :tabnew<cr>
+map <leader>tp :tabprevious<cr>
+map <leader>tn :tabnext<cr>
+map <leader>te :tabedit<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove<cr>
+
+" Fold lines
+set foldmethod=manual
+" set gfw=msyh:h10.5
+
+" vundle config
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" powerline config 
+" set guifont=PowerlineSymbols\ for\ Powerline
+set nocompatible
+set t_Co=256
+set laststatus=2
+" let g:Powerline_symbols='fancy'
+
+Bundle 'gmarik/vundle'
+Bundle 'taglist.vim'
+Bundle 'nerdtree'
+Bundle 'vim-powerline'
+Bundle 'python-mode'
+Bundle 'winmanager'
+" Bundle 'VimPdb'
+
+" colorscheme desertEx
+colorscheme desertEx
+
+" Pymode config
+"
+map <buffer> <silent> <F5> :PyLint<cr>
+
+" Load show documentation plugin
+let g:pymode_doc = 1
+" Key for show python documentation
+let g:pymode_doc_key = 'K'
+
+" Disable pylint checking every save
+let g:pymode_lint_write = 0
+" Load run code plugin
+let g:pymode_run = 1
+" Key for run python code
+let g:pymode_run_key = '<leader>r'
+
+" Minimal height of pylint error window
+let g:pymode_lint_minheight = 3
+let g:pymode_lint_maxheight = 6
+
+" Load rope plugin
+let g:pymode_rope = 1
+let g:pymode_rope_enable_autoimport = 1
+let g:pymode_rope_extended_complete = 1
+let g:pymode_rope_vim_completion = 1
+
+
+" WinManager config
+" let g:winManagerWindowLayout = 'TagList|FileExplorer,BufExplorer'
+let g:winManagerWindowLayout = 'NERDTree|TagList,BufExplorer'
+let g:winManagerWidth = 30
+" let g:AutoOpenWinManager = 1
+" let g:AutoOpenWinManager = 1
+
+nmap <silent> <F8> :WMToggle<cr>

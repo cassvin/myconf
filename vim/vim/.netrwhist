@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/etc/iptables'
+let g:netrw_dirhist_2='/etc/cron.d'
+let g:netrw_dirhist_3='/etc/cron.daily'
+let g:netrw_dirhist_4='/etc/depmod.d'
+let g:netrw_dirhist_5='/etc'
+let g:netrw_dirhist_6='/etc/iproute2'
+let g:netrw_dirhist_7='/etc/iptables'
+let g:netrw_dirhist_8='/tmp/pip-build/PyGTK'
+let g:netrw_dirhist_9='/home/cassvin/.gconf/desktop/ibus/engine/Pinyin'

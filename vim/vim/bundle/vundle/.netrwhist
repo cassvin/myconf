@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/cassvin/Project/Python/tornado'
+let g:netrw_dirhist_2='/home/cassvin/.vim/bundle/VimPdb'
+let g:netrw_dirhist_3='/home/cassvin/Project/Python'
+let g:netrw_dirhist_4='/usr/lib/python2.7/site-packages/vimpdb'
+let g:netrw_dirhist_5='/home/cassvin/.vim/bundle/winmanager/plugin'
+let g:netrw_dirhist_6='/home/cassvin/.vim/bundle'
