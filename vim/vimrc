@@ -127,3 +127,17 @@ let g:winManagerWidth = 30
 " let g:AutoOpenWinManager = 1
 
 nmap <silent> <F8> :WMToggle<cr>
+
+" automate header for python file
+function! s:insert_python_header()
+  let template = $HOME . '/.vim/template/python.template'
+  let date = strftime('%Y-%m-%d')
+  let i = 0
+  for line in readfile(template)
+    let line = substitute(line, '<date>', date, 'ge')
+    call append(i, line)
+    let i += 1
+  endfor
+endfunction
+
+autocmd BufNewFile *.{py} call <SID>insert_python_header()
